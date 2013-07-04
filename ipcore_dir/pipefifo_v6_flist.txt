@@ -1,0 +1,14 @@
+# Output products list for <pipefifo_v6>
+_xmsgs\pn_parser.xmsgs
+fifo_generator_ug175.pdf
+pipefifo_v6.asy
+pipefifo_v6.gise
+pipefifo_v6.ngc
+pipefifo_v6.sym
+pipefifo_v6.v
+pipefifo_v6.veo
+pipefifo_v6.xco
+pipefifo_v6.xise
+pipefifo_v6_flist.txt
+pipefifo_v6_readme.txt
+pipefifo_v6_xmdf.tcl
