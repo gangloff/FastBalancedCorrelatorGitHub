@@ -1,0 +1,4 @@
+verilog work "pll.v"
+verilog work "ipcore_dir/pipefifo_v6.v"
+verilog work "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v"
+verilog work "PhotonCounter.v"

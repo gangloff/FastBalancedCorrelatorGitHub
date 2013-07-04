@@ -1,0 +1,151 @@
+Release 14.2 ngdbuild P.28xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: E:\Xilinx\14.2\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -sd E:/Program Files/Opal
+Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001 -sd ipcore_dir -sd
+../XEM6001 -aul -nt timestamp -uc photonconnections.ucf -p xc6slx16-ftg256-2
+PhotonCounter.ngc PhotonCounter.ngd
+
+Reading NGO file
+"F:/VIs/VV_Photonpy/FastBalancedCorrelatorGitHub/PhotonCounter.ngc" ...
+Loading design module "E:/Program Files/Opal
+Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okPipeOut.ngc"...
+Loading design module "E:/Program Files/Opal
+Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okTriggerIn.ngc"...
+Loading design module "E:/Program Files/Opal
+Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okWireIn.ngc"...
+Loading design module "ipcore_dir/pipefifo_v6.ngc"...
+Loading design module "E:/Program Files/Opal
+Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okCore.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "photonconnections.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:59 - Constraint <NET "hi_muxsel"     LOC="T11"   |>
+   [photonconnections.ucf(33)]: NET "hi_muxsel" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "hi_muxsel"     LOC="T11"   |> [photonconnections.ucf(33)]' could not
+   be found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <IOSTANDARD="LVCMOS33";>
+   [photonconnections.ucf(33)]: NET "hi_muxsel" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+INFO:ConstraintSystem:59 - Constraint <NET "clk1"      LOC="T8"  |>
+   [photonconnections.ucf(53)]: NET "clk1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "clk1"      LOC="T8"  |> [photonconnections.ucf(53)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <IOSTANDARD="LVCMOS33";>
+   [photonconnections.ucf(53)]: NET "clk1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+INFO:ConstraintSystem:59 - Constraint <NET "button<0>"  LOC="D5" |>
+   [photonconnections.ucf(72)]: NET "button<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "button<0>"  LOC="D5" |> [photonconnections.ucf(72)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <IOSTANDARD="LVCMOS33";>
+   [photonconnections.ucf(72)]: NET "button<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+INFO:ConstraintSystem:59 - Constraint <NET "button<1>"  LOC="D6" |>
+   [photonconnections.ucf(73)]: NET "button<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "button<1>"  LOC="D6" |> [photonconnections.ucf(73)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <IOSTANDARD="LVCMOS33";>
+   [photonconnections.ucf(73)]: NET "button<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+INFO:ConstraintSystem:59 - Constraint <NET "button<2>"  LOC="D8" |>
+   [photonconnections.ucf(74)]: NET "button<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "button<2>"  LOC="D8" |> [photonconnections.ucf(74)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <IOSTANDARD="LVCMOS33";>
+   [photonconnections.ucf(74)]: NET "button<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+INFO:ConstraintSystem:59 - Constraint <NET "button<3>"  LOC="D9" |>
+   [photonconnections.ucf(75)]: NET "button<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "button<3>"  LOC="D9" |> [photonconnections.ucf(75)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <IOSTANDARD="LVCMOS33";>
+   [photonconnections.ucf(75)]: NET "button<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+INFO:ConstraintSystem:178 - TNM 'okHostClk', used in period specification
+   'TS_okHostClk', was traced into DCM_SP instance okHI/hi_dcm. The following
+   new TNM groups and period specifications were generated at the DCM_SP
+   output(s): 
+   CLK0: <TIMESPEC TS_okHI_dcm_clk0 = PERIOD "okHI_dcm_clk0" TS_okHostClk HIGH
+   50%>
+
+INFO:ConstraintSystem - The Period constraint <NET "clk"       PERIOD = 6.4 ns;>
+   [photonconnections.ucf(79)], is specified using the Net Period method which
+   is not recommended. Please use the Timespec PERIOD method.
+
+INFO:ConstraintSystem - The Period constraint <NET "clk2x"     PERIOD = 3.2 ns;>
+   [photonconnections.ucf(80)], is specified using the Net Period method which
+   is not recommended. Please use the Timespec PERIOD method.
+
+Done...
+
+INFO:NgdBuild:1222 - Setting CLKIN_PERIOD attribute associated with DCM instance
+   okHI/hi_dcm to 20.830000 ns based on the period specification (<TIMESPEC
+   "TS_okHostClk" = PERIOD "okHostClk" 20.83 ns HIGH 50%;>
+   [photonconnections.ucf(36)]).
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   6
+
+Total memory usage is 106904 kilobytes
+
+Writing NGD file "PhotonCounter.ngd" ...
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "PhotonCounter.bld"...

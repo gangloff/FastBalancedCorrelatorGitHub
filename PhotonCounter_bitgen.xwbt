@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.ncd
+OUTFILE=F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.bit
+FAMILY=Spartan6
+PART=xc6slx16-2ftg256
+WORKINGDIR=F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub
+LICENSE=WebPack
+USER_INFO=210650047_0_0_713

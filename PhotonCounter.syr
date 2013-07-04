@@ -1,0 +1,939 @@
+Release 14.2 - xst P.28xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Reading design: PhotonCounter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "PhotonCounter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "PhotonCounter"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-ftg256
+
+---- Source Options
+Top Module Name                    : PhotonCounter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : Yes
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Move First FlipFlop Stage          : YES
+Move Last FlipFlop Stage           : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : True
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : YES
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001" "ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\pll.v" into library work
+Parsing module <pll>.
+Analyzing Verilog file "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\ipcore_dir\pipefifo_v6.v" into library work
+Parsing module <pipefifo_v6>.
+Analyzing Verilog file "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v" into library work
+Parsing module <okHost>.
+Parsing module <okCore>.
+Parsing module <okWireIn>.
+Parsing module <okWireOut>.
+Parsing module <okTriggerIn>.
+Parsing module <okTriggerOut>.
+Parsing module <okPipeIn>.
+Parsing module <okPipeOut>.
+Parsing module <okBTPipeIn>.
+Parsing module <okBTPipeOut>.
+Parsing module <okWireOR>.
+Analyzing Verilog file "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" into library work
+Parsing module <PhotonCounter>.
+Parsing module <phcounter>.
+Parsing module <logger>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <PhotonCounter>.
+
+Elaborating module <SRL16(INIT=16'b1111111111111111)>.
+
+Elaborating module <pll>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <DCM(CLK_FEEDBACK="1X",CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=6.667,CLKOUT_PHASE_SHIFT="NONE",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",DFS_FREQUENCY_MODE="LOW",DLL_FREQUENCY_MODE="LOW",DUTY_CYCLE_CORRECTION="TRUE",FACTORY_JF=16'b1000000010000000,PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 166: Assignment to pmt_free2 ignored, since the identifier is never used
+
+Elaborating module <phcounter>.
+
+Elaborating module <logger>.
+WARNING:HDLCompiler:413 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 414: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 434: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:1016 - "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v" Line 34: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v" Line 62: Port BUSY is not connected to this instance
+
+Elaborating module <okHost>.
+
+Elaborating module <DCM_SP>.
+
+Elaborating module <FDS>.
+
+Elaborating module <FD>.
+
+Elaborating module <IOBUF>.
+
+Elaborating module <IODELAY2(IDELAY_TYPE="FIXED",IDELAY_VALUE=50,DELAY_SRC="IDATAIN")>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <OBUF>.
+
+Elaborating module <okCore>.
+
+Elaborating module <pipefifo_v6>.
+WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 295: Assignment to PipeFull1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 299: Assignment to PipeFull2 ignored, since the identifier is never used
+
+Elaborating module <okPipeOut>.
+
+Elaborating module <okTriggerIn>.
+
+Elaborating module <okWireIn>.
+
+Elaborating module <okWireOR(N=2)>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <PhotonCounter>.
+    Related source file is "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v".
+        nOK = 2
+INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 71: Output port <CLKIN_IBUFG_OUT> of the instance <pllloop> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 293: Output port <full> of the instance <pipeoutfifo1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 297: Output port <full> of the instance <pipeoutfifo2> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <reset>.
+    Found 32-bit register for signal <clk_divide>.
+    Found 32-bit register for signal <clk2x_counter>.
+    Found 1-bit register for signal <set_clk_det>.
+    Found 1-bit register for signal <set_clk>.
+    Found 4-bit register for signal <sync_buf>.
+    Found 1-bit register for signal <sync2x_det>.
+    Found 1-bit register for signal <sync2x>.
+    Found 1-bit register for signal <sync2x_det_free>.
+    Found 1-bit register for signal <sync2x_free>.
+    Found 1-bit register for signal <sync2x_1x>.
+    Found 1-bit register for signal <sync1x>.
+    Found 8-bit register for signal <sync_div>.
+    Found 8-bit register for signal <sync_counter>.
+    Found 1-bit register for signal <sync_en_det>.
+    Found 1-bit register for signal <sync_en>.
+    Found 4-bit register for signal <pmt_buf1>.
+    Found 4-bit register for signal <pmt_buf2>.
+    Found 1-bit register for signal <pmt_det1>.
+    Found 1-bit register for signal <pmt_free1>.
+    Found 1-bit register for signal <pmt1>.
+    Found 1-bit register for signal <pmt_det2>.
+    Found 1-bit register for signal <pmt2>.
+    Found 26-bit register for signal <photons1>.
+    Found 26-bit register for signal <photons2>.
+    Found 26-bit register for signal <photons_sync1>.
+    Found 26-bit register for signal <photons_sync2>.
+    Found 1-bit register for signal <pmt1x>.
+    Found 4-bit register for signal <pmt_strecher>.
+    Found 16-bit register for signal <max_count_f>.
+    Found 32-bit register for signal <counter_f>.
+    Found 1-bit register for signal <trigger_f>.
+    Found 1-bit register for signal <log_f1>.
+    Found 1-bit register for signal <log_f2>.
+    Found 1-bit register for signal <clear_det>.
+    Found 1-bit register for signal <clear_photons>.
+    Found 1-bit register for signal <reset_buf>.
+    Found 4-bit subtractor for signal <pmt_strecher[3]_GND_1_o_sub_48_OUT> created at line 209.
+    Found 32-bit adder for signal <clk2x_counter[31]_GND_1_o_add_7_OUT> created at line 87.
+    Found 8-bit adder for signal <sync_counter[7]_GND_1_o_add_21_OUT> created at line 138.
+    Found 32-bit adder for signal <counter_f[31]_GND_1_o_add_58_OUT> created at line 250.
+    Found 32-bit comparator equal for signal <clk2x_counter[31]_clk_divide[31]_equal_7_o> created at line 84
+    Found 8-bit comparator equal for signal <sync_counter[7]_sync_div[7]_equal_21_o> created at line 138
+    Found 16-bit comparator greater for signal <max_count_f[15]_counter_f[31]_LessThan_53_o> created at line 239
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 271 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <PhotonCounter> synthesized.
+
+Synthesizing Unit <pll>.
+    Related source file is "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\pll.v".
+    Summary:
+	no macro.
+Unit <pll> synthesized.
+
+Synthesizing Unit <phcounter>.
+    Related source file is "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v".
+    Found 1-bit register for signal <syncdly_f>.
+    Found 1-bit register for signal <sync_f>.
+    Found 16-bit register for signal <count_f>.
+    Found 1-bit register for signal <full_flag>.
+    Found 16-bit register for signal <count_o>.
+    Found 1-bit register for signal <photon_f>.
+    Found 16-bit adder for signal <count_f[15]_GND_7_o_add_2_OUT> created at line 345.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <phcounter> synthesized.
+
+Synthesizing Unit <logger>.
+    Related source file is "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v".
+    Set property "INIT = R" for signal <state_f>.
+    Found 1-bit register for signal <wr_o>.
+    Found 16-bit register for signal <data_o>.
+    Found 26-bit register for signal <samplecount_f>.
+    Found 1-bit register for signal <ld_o>.
+    Found 2-bit register for signal <state_f>.
+    Found finite state machine <FSM_0> for signal <state_f>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_i (rising_edge)                            |
+    | Reset              | reset_i (positive)                             |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  44 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <logger> synthesized.
+
+Synthesizing Unit <okHost>.
+    Related source file is "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v".
+    Set property "IOB = TRUE" for instance <delays[0].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[0].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[0].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[1].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[1].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[1].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[2].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[2].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[2].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[3].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[3].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[3].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[4].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[4].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[4].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[5].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[5].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[5].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[6].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[6].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[6].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[7].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[7].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[7].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[8].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[8].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[8].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[9].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[9].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[9].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[10].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[10].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[10].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[11].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[11].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[11].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[12].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[12].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[12].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[13].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[13].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[13].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[14].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[14].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[14].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[15].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[15].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[15].fdreout1>.
+    Summary:
+	no macro.
+Unit <okHost> synthesized.
+
+Synthesizing Unit <okWireOR>.
+    Related source file is "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v".
+        N = 2
+    Summary:
+	no macro.
+Unit <okWireOR> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 56
+ 16-bit adder                                          : 52
+ 32-bit adder                                          : 2
+ 4-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 357
+ 1-bit register                                        : 235
+ 16-bit register                                       : 107
+ 26-bit register                                       : 6
+ 32-bit register                                       : 3
+ 4-bit register                                        : 4
+ 8-bit register                                        : 2
+# Comparators                                          : 3
+ 16-bit comparator greater                             : 1
+ 32-bit comparator equal                               : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 58
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 52
+ 26-bit 2-to-1 multiplexer                             : 4
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okPipeOut.ngc>.
+Reading core <E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okTriggerIn.ngc>.
+Reading core <E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okWireIn.ngc>.
+Reading core <ipcore_dir/pipefifo_v6.ngc>.
+Reading core <E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okCore.ngc>.
+Loading core <okPipeOut> for timing and area information for instance <pipeOuta0>.
+Loading core <okPipeOut> for timing and area information for instance <pipeOutaf>.
+Loading core <okTriggerIn> for timing and area information for instance <ep40>.
+Loading core <okWireIn> for timing and area information for instance <ep00>.
+Loading core <okWireIn> for timing and area information for instance <ep01>.
+Loading core <pipefifo_v6> for timing and area information for instance <pipeoutfifo1>.
+Loading core <pipefifo_v6> for timing and area information for instance <pipeoutfifo2>.
+Loading core <okCore> for timing and area information for instance <hicore>.
+
+Synthesizing (advanced) Unit <PhotonCounter>.
+The following registers are absorbed into counter <counter_f>: 1 register on signal <counter_f>.
+The following registers are absorbed into counter <pmt_strecher>: 1 register on signal <pmt_strecher>.
+The following registers are absorbed into counter <sync_counter>: 1 register on signal <sync_counter>.
+The following registers are absorbed into counter <clk2x_counter>: 1 register on signal <clk2x_counter>.
+Unit <PhotonCounter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <phcounter>.
+The following registers are absorbed into counter <count_f>: 1 register on signal <count_f>.
+Unit <phcounter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 56
+ 16-bit up counter                                     : 52
+ 32-bit up counter                                     : 2
+ 4-bit down counter                                    : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 1375
+ Flip-Flops                                            : 1375
+# Comparators                                          : 3
+ 16-bit comparator greater                             : 1
+ 32-bit comparator equal                               : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 108
+ 1-bit 2-to-1 multiplexer                              : 54
+ 16-bit 2-to-1 multiplexer                             : 52
+ 26-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <log1/FSM_0> on signal <state_f[1:2]> with user encoding.
+Optimizing FSM <log2/FSM_0> on signal <state_f[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+INFO:Xst:1901 - Instance pllloop/DCM_INST in unit PhotonCounter of type DCM has been replaced by DCM_SP
+
+Optimizing unit <PhotonCounter> ...
+
+Optimizing unit <okHost> ...
+
+Optimizing unit <phcounter> ...
+
+Optimizing unit <logger> ...
+INFO:Xst:2261 - The FF/Latch <counter2<25>/sync_f> in Unit <PhotonCounter> is equivalent to the following 51 FFs/Latches, which will be removed : <counter2<24>/sync_f> <counter2<23>/sync_f> <counter2<22>/sync_f> <counter2<21>/sync_f> <counter2<20>/sync_f> <counter2<19>/sync_f> <counter2<18>/sync_f> <counter2<17>/sync_f> <counter2<16>/sync_f> <counter2<15>/sync_f> <counter2<14>/sync_f> <counter2<13>/sync_f> <counter2<12>/sync_f> <counter2<11>/sync_f> <counter2<10>/sync_f> <counter2<9>/sync_f> <counter2<8>/sync_f> <counter2<7>/sync_f> <counter2<6>/sync_f> <counter2<5>/sync_f> <counter2<4>/sync_f> <counter2<3>/sync_f> <counter2<2>/sync_f> <counter2<1>/sync_f> <counter2<0>/sync_f> <counter1<25>/sync_f> <counter1<24>/sync_f> <counter1<23>/sync_f> <counter1<22>/sync_f> <counter1<21>/sync_f> <counter1<20>/sync_f> <counter1<19>/sync_f> <counter1<18>/sync_f> <counter1<17>/sync_f> <counter1<16>/sync_f> <counter1<15>/sync_f> <counter1<14>/sync_f> <counter1<13>/sync_f> <counter1<12>/sync_f> <counter1<11>/sync_f>
+   <counter1<10>/sync_f> <counter1<9>/sync_f> <counter1<8>/sync_f> <counter1<7>/sync_f> <counter1<6>/sync_f> <counter1<5>/sync_f> <counter1<4>/sync_f> <counter1<3>/sync_f> <counter1<2>/sync_f> <counter1<1>/sync_f> <counter1<0>/sync_f> 
+INFO:Xst:2261 - The FF/Latch <counter2<25>/syncdly_f> in Unit <PhotonCounter> is equivalent to the following 51 FFs/Latches, which will be removed : <counter2<24>/syncdly_f> <counter2<23>/syncdly_f> <counter2<22>/syncdly_f> <counter2<21>/syncdly_f> <counter2<20>/syncdly_f> <counter2<19>/syncdly_f> <counter2<18>/syncdly_f> <counter2<17>/syncdly_f> <counter2<16>/syncdly_f> <counter2<15>/syncdly_f> <counter2<14>/syncdly_f> <counter2<13>/syncdly_f> <counter2<12>/syncdly_f> <counter2<11>/syncdly_f> <counter2<10>/syncdly_f> <counter2<9>/syncdly_f> <counter2<8>/syncdly_f> <counter2<7>/syncdly_f> <counter2<6>/syncdly_f> <counter2<5>/syncdly_f> <counter2<4>/syncdly_f> <counter2<3>/syncdly_f> <counter2<2>/syncdly_f> <counter2<1>/syncdly_f> <counter2<0>/syncdly_f> <counter1<25>/syncdly_f> <counter1<24>/syncdly_f> <counter1<23>/syncdly_f> <counter1<22>/syncdly_f> <counter1<21>/syncdly_f> <counter1<20>/syncdly_f> <counter1<19>/syncdly_f> <counter1<18>/syncdly_f> <counter1<17>/syncdly_f> <counter1<16>/syncdly_f>
+   <counter1<15>/syncdly_f> <counter1<14>/syncdly_f> <counter1<13>/syncdly_f> <counter1<12>/syncdly_f> <counter1<11>/syncdly_f> <counter1<10>/syncdly_f> <counter1<9>/syncdly_f> <counter1<8>/syncdly_f> <counter1<7>/syncdly_f> <counter1<6>/syncdly_f> <counter1<5>/syncdly_f> <counter1<4>/syncdly_f> <counter1<3>/syncdly_f> <counter1<2>/syncdly_f> <counter1<1>/syncdly_f> <counter1<0>/syncdly_f> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PhotonCounter, actual ratio is 35.
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> 
+
+Pipelining and Register Balancing Report ...
+
+Processing Unit <PhotonCounter> :
+	Register(s) counter1<0>/count_o_12 has(ve) been backward balanced into : counter1<0>/count_o_12_BRB0 counter1<0>/count_o_12_BRB1 counter1<0>/count_o_12_BRB2.
+	Register(s) counter1<0>/count_o_9 has(ve) been backward balanced into : counter1<0>/count_o_9_BRB1 counter1<0>/count_o_9_BRB2.
+	Register(s) counter1<10>/count_o_12 has(ve) been backward balanced into : counter1<10>/count_o_12_BRB1 counter1<10>/count_o_12_BRB2.
+	Register(s) counter1<10>/count_o_9 has(ve) been backward balanced into : counter1<10>/count_o_9_BRB1 counter1<10>/count_o_9_BRB2.
+	Register(s) counter1<11>/count_o_12 has(ve) been backward balanced into : counter1<11>/count_o_12_BRB1 counter1<11>/count_o_12_BRB2.
+	Register(s) counter1<11>/count_o_9 has(ve) been backward balanced into : counter1<11>/count_o_9_BRB1 counter1<11>/count_o_9_BRB2.
+	Register(s) counter1<12>/count_o_12 has(ve) been backward balanced into : counter1<12>/count_o_12_BRB1 counter1<12>/count_o_12_BRB2.
+	Register(s) counter1<12>/count_o_9 has(ve) been backward balanced into : counter1<12>/count_o_9_BRB1 counter1<12>/count_o_9_BRB2.
+	Register(s) counter1<13>/count_o_12 has(ve) been backward balanced into : counter1<13>/count_o_12_BRB1 counter1<13>/count_o_12_BRB2.
+	Register(s) counter1<13>/count_o_9 has(ve) been backward balanced into : counter1<13>/count_o_9_BRB1 counter1<13>/count_o_9_BRB2.
+	Register(s) counter1<14>/count_o_12 has(ve) been backward balanced into : counter1<14>/count_o_12_BRB1 counter1<14>/count_o_12_BRB2.
+	Register(s) counter1<14>/count_o_9 has(ve) been backward balanced into : counter1<14>/count_o_9_BRB1 counter1<14>/count_o_9_BRB2.
+	Register(s) counter1<15>/count_o_12 has(ve) been backward balanced into : counter1<15>/count_o_12_BRB1 counter1<15>/count_o_12_BRB2.
+	Register(s) counter1<15>/count_o_9 has(ve) been backward balanced into : counter1<15>/count_o_9_BRB1 counter1<15>/count_o_9_BRB2.
+	Register(s) counter1<16>/count_o_12 has(ve) been backward balanced into : counter1<16>/count_o_12_BRB1 counter1<16>/count_o_12_BRB2.
+	Register(s) counter1<16>/count_o_9 has(ve) been backward balanced into : counter1<16>/count_o_9_BRB1 counter1<16>/count_o_9_BRB2.
+	Register(s) counter1<17>/count_o_12 has(ve) been backward balanced into : counter1<17>/count_o_12_BRB1 counter1<17>/count_o_12_BRB2.
+	Register(s) counter1<17>/count_o_9 has(ve) been backward balanced into : counter1<17>/count_o_9_BRB1 counter1<17>/count_o_9_BRB2.
+	Register(s) counter1<18>/count_o_12 has(ve) been backward balanced into : counter1<18>/count_o_12_BRB1 counter1<18>/count_o_12_BRB2.
+	Register(s) counter1<18>/count_o_9 has(ve) been backward balanced into : counter1<18>/count_o_9_BRB1 counter1<18>/count_o_9_BRB2.
+	Register(s) counter1<19>/count_o_12 has(ve) been backward balanced into : counter1<19>/count_o_12_BRB1 counter1<19>/count_o_12_BRB2.
+	Register(s) counter1<19>/count_o_9 has(ve) been backward balanced into : counter1<19>/count_o_9_BRB1 counter1<19>/count_o_9_BRB2.
+	Register(s) counter1<1>/count_o_12 has(ve) been backward balanced into : counter1<1>/count_o_12_BRB1 counter1<1>/count_o_12_BRB2.
+	Register(s) counter1<1>/count_o_9 has(ve) been backward balanced into : counter1<1>/count_o_9_BRB1 counter1<1>/count_o_9_BRB2.
+	Register(s) counter1<20>/count_o_12 has(ve) been backward balanced into : counter1<20>/count_o_12_BRB1 counter1<20>/count_o_12_BRB2.
+	Register(s) counter1<20>/count_o_9 has(ve) been backward balanced into : counter1<20>/count_o_9_BRB1 counter1<20>/count_o_9_BRB2.
+	Register(s) counter1<21>/count_o_12 has(ve) been backward balanced into : counter1<21>/count_o_12_BRB1 counter1<21>/count_o_12_BRB2.
+	Register(s) counter1<21>/count_o_9 has(ve) been backward balanced into : counter1<21>/count_o_9_BRB1 counter1<21>/count_o_9_BRB2.
+	Register(s) counter1<22>/count_o_12 has(ve) been backward balanced into : counter1<22>/count_o_12_BRB1 counter1<22>/count_o_12_BRB2.
+	Register(s) counter1<22>/count_o_9 has(ve) been backward balanced into : counter1<22>/count_o_9_BRB1 counter1<22>/count_o_9_BRB2.
+	Register(s) counter1<23>/count_o_12 has(ve) been backward balanced into : counter1<23>/count_o_12_BRB1 counter1<23>/count_o_12_BRB2.
+	Register(s) counter1<23>/count_o_9 has(ve) been backward balanced into : counter1<23>/count_o_9_BRB1 counter1<23>/count_o_9_BRB2.
+	Register(s) counter1<24>/count_o_12 has(ve) been backward balanced into : counter1<24>/count_o_12_BRB1 counter1<24>/count_o_12_BRB2.
+	Register(s) counter1<24>/count_o_9 has(ve) been backward balanced into : counter1<24>/count_o_9_BRB1 counter1<24>/count_o_9_BRB2.
+	Register(s) counter1<25>/count_o_12 has(ve) been backward balanced into : counter1<25>/count_o_12_BRB1.
+	Register(s) counter1<25>/count_o_9 has(ve) been backward balanced into : counter1<25>/count_o_9_BRB1.
+	Register(s) counter1<2>/count_o_12 has(ve) been backward balanced into : counter1<2>/count_o_12_BRB1 counter1<2>/count_o_12_BRB2.
+	Register(s) counter1<2>/count_o_9 has(ve) been backward balanced into : counter1<2>/count_o_9_BRB1 counter1<2>/count_o_9_BRB2.
+	Register(s) counter1<3>/count_o_12 has(ve) been backward balanced into : counter1<3>/count_o_12_BRB1 counter1<3>/count_o_12_BRB2.
+	Register(s) counter1<3>/count_o_9 has(ve) been backward balanced into : counter1<3>/count_o_9_BRB1 counter1<3>/count_o_9_BRB2.
+	Register(s) counter1<4>/count_o_12 has(ve) been backward balanced into : counter1<4>/count_o_12_BRB1 counter1<4>/count_o_12_BRB2.
+	Register(s) counter1<4>/count_o_9 has(ve) been backward balanced into : counter1<4>/count_o_9_BRB1 counter1<4>/count_o_9_BRB2.
+	Register(s) counter1<5>/count_o_12 has(ve) been backward balanced into : counter1<5>/count_o_12_BRB1 counter1<5>/count_o_12_BRB2.
+	Register(s) counter1<5>/count_o_9 has(ve) been backward balanced into : counter1<5>/count_o_9_BRB1 counter1<5>/count_o_9_BRB2.
+	Register(s) counter1<6>/count_o_12 has(ve) been backward balanced into : counter1<6>/count_o_12_BRB1 counter1<6>/count_o_12_BRB2.
+	Register(s) counter1<6>/count_o_9 has(ve) been backward balanced into : counter1<6>/count_o_9_BRB1 counter1<6>/count_o_9_BRB2.
+	Register(s) counter1<7>/count_o_12 has(ve) been backward balanced into : counter1<7>/count_o_12_BRB1 counter1<7>/count_o_12_BRB2.
+	Register(s) counter1<7>/count_o_9 has(ve) been backward balanced into : counter1<7>/count_o_9_BRB1 counter1<7>/count_o_9_BRB2.
+	Register(s) counter1<8>/count_o_12 has(ve) been backward balanced into : counter1<8>/count_o_12_BRB1 counter1<8>/count_o_12_BRB2.
+	Register(s) counter1<8>/count_o_9 has(ve) been backward balanced into : counter1<8>/count_o_9_BRB1 counter1<8>/count_o_9_BRB2.
+	Register(s) counter1<9>/count_o_12 has(ve) been backward balanced into : counter1<9>/count_o_12_BRB1 counter1<9>/count_o_12_BRB2.
+	Register(s) counter1<9>/count_o_9 has(ve) been backward balanced into : counter1<9>/count_o_9_BRB1 counter1<9>/count_o_9_BRB2.
+	Register(s) counter2<0>/count_o_12 has(ve) been backward balanced into : counter2<0>/count_o_12_BRB0 counter2<0>/count_o_12_BRB1 counter2<0>/count_o_12_BRB2.
+	Register(s) counter2<0>/count_o_9 has(ve) been backward balanced into : counter2<0>/count_o_9_BRB1 counter2<0>/count_o_9_BRB2.
+	Register(s) counter2<10>/count_o_12 has(ve) been backward balanced into : counter2<10>/count_o_12_BRB1 counter2<10>/count_o_12_BRB2.
+	Register(s) counter2<10>/count_o_9 has(ve) been backward balanced into : counter2<10>/count_o_9_BRB1 counter2<10>/count_o_9_BRB2.
+	Register(s) counter2<11>/count_o_12 has(ve) been backward balanced into : counter2<11>/count_o_12_BRB1 counter2<11>/count_o_12_BRB2.
+	Register(s) counter2<11>/count_o_9 has(ve) been backward balanced into : counter2<11>/count_o_9_BRB1 counter2<11>/count_o_9_BRB2.
+	Register(s) counter2<12>/count_o_12 has(ve) been backward balanced into : counter2<12>/count_o_12_BRB1 counter2<12>/count_o_12_BRB2.
+	Register(s) counter2<12>/count_o_9 has(ve) been backward balanced into : counter2<12>/count_o_9_BRB1 counter2<12>/count_o_9_BRB2.
+	Register(s) counter2<13>/count_o_12 has(ve) been backward balanced into : counter2<13>/count_o_12_BRB1 counter2<13>/count_o_12_BRB2.
+	Register(s) counter2<13>/count_o_9 has(ve) been backward balanced into : counter2<13>/count_o_9_BRB1 counter2<13>/count_o_9_BRB2.
+	Register(s) counter2<14>/count_o_12 has(ve) been backward balanced into : counter2<14>/count_o_12_BRB1 counter2<14>/count_o_12_BRB2.
+	Register(s) counter2<14>/count_o_9 has(ve) been backward balanced into : counter2<14>/count_o_9_BRB1 counter2<14>/count_o_9_BRB2.
+	Register(s) counter2<15>/count_o_12 has(ve) been backward balanced into : counter2<15>/count_o_12_BRB1 counter2<15>/count_o_12_BRB2.
+	Register(s) counter2<15>/count_o_9 has(ve) been backward balanced into : counter2<15>/count_o_9_BRB1 counter2<15>/count_o_9_BRB2.
+	Register(s) counter2<16>/count_o_12 has(ve) been backward balanced into : counter2<16>/count_o_12_BRB1 counter2<16>/count_o_12_BRB2.
+	Register(s) counter2<16>/count_o_9 has(ve) been backward balanced into : counter2<16>/count_o_9_BRB1 counter2<16>/count_o_9_BRB2.
+	Register(s) counter2<17>/count_o_12 has(ve) been backward balanced into : counter2<17>/count_o_12_BRB1 counter2<17>/count_o_12_BRB2.
+	Register(s) counter2<17>/count_o_9 has(ve) been backward balanced into : counter2<17>/count_o_9_BRB1 counter2<17>/count_o_9_BRB2.
+	Register(s) counter2<18>/count_o_12 has(ve) been backward balanced into : counter2<18>/count_o_12_BRB1 counter2<18>/count_o_12_BRB2.
+	Register(s) counter2<18>/count_o_9 has(ve) been backward balanced into : counter2<18>/count_o_9_BRB1 counter2<18>/count_o_9_BRB2.
+	Register(s) counter2<19>/count_o_12 has(ve) been backward balanced into : counter2<19>/count_o_12_BRB1 counter2<19>/count_o_12_BRB2.
+	Register(s) counter2<19>/count_o_9 has(ve) been backward balanced into : counter2<19>/count_o_9_BRB1 counter2<19>/count_o_9_BRB2.
+	Register(s) counter2<1>/count_o_12 has(ve) been backward balanced into : counter2<1>/count_o_12_BRB1 counter2<1>/count_o_12_BRB2.
+	Register(s) counter2<1>/count_o_9 has(ve) been backward balanced into : counter2<1>/count_o_9_BRB1 counter2<1>/count_o_9_BRB2.
+	Register(s) counter2<20>/count_o_12 has(ve) been backward balanced into : counter2<20>/count_o_12_BRB1 counter2<20>/count_o_12_BRB2.
+	Register(s) counter2<20>/count_o_9 has(ve) been backward balanced into : counter2<20>/count_o_9_BRB1 counter2<20>/count_o_9_BRB2.
+	Register(s) counter2<21>/count_o_12 has(ve) been backward balanced into : counter2<21>/count_o_12_BRB1 counter2<21>/count_o_12_BRB2.
+	Register(s) counter2<21>/count_o_9 has(ve) been backward balanced into : counter2<21>/count_o_9_BRB1 counter2<21>/count_o_9_BRB2.
+	Register(s) counter2<22>/count_o_12 has(ve) been backward balanced into : counter2<22>/count_o_12_BRB1 counter2<22>/count_o_12_BRB2.
+	Register(s) counter2<22>/count_o_9 has(ve) been backward balanced into : counter2<22>/count_o_9_BRB1 counter2<22>/count_o_9_BRB2.
+	Register(s) counter2<23>/count_o_12 has(ve) been backward balanced into : counter2<23>/count_o_12_BRB1 counter2<23>/count_o_12_BRB2.
+	Register(s) counter2<23>/count_o_9 has(ve) been backward balanced into : counter2<23>/count_o_9_BRB1 counter2<23>/count_o_9_BRB2.
+	Register(s) counter2<24>/count_o_12 has(ve) been backward balanced into : counter2<24>/count_o_12_BRB1 counter2<24>/count_o_12_BRB2.
+	Register(s) counter2<24>/count_o_9 has(ve) been backward balanced into : counter2<24>/count_o_9_BRB1 counter2<24>/count_o_9_BRB2.
+	Register(s) counter2<25>/count_o_12 has(ve) been backward balanced into : counter2<25>/count_o_12_BRB1.
+	Register(s) counter2<25>/count_o_9 has(ve) been backward balanced into : counter2<25>/count_o_9_BRB1.
+	Register(s) counter2<25>/syncdly_f has(ve) been backward balanced into : counter2<25>/syncdly_f_BRB0 counter2<25>/syncdly_f_BRB1.
+	Register(s) counter2<2>/count_o_12 has(ve) been backward balanced into : counter2<2>/count_o_12_BRB1 counter2<2>/count_o_12_BRB2.
+	Register(s) counter2<2>/count_o_9 has(ve) been backward balanced into : counter2<2>/count_o_9_BRB1 counter2<2>/count_o_9_BRB2.
+	Register(s) counter2<3>/count_o_12 has(ve) been backward balanced into : counter2<3>/count_o_12_BRB1 counter2<3>/count_o_12_BRB2.
+	Register(s) counter2<3>/count_o_9 has(ve) been backward balanced into : counter2<3>/count_o_9_BRB1 counter2<3>/count_o_9_BRB2.
+	Register(s) counter2<4>/count_o_12 has(ve) been backward balanced into : counter2<4>/count_o_12_BRB1 counter2<4>/count_o_12_BRB2.
+	Register(s) counter2<4>/count_o_9 has(ve) been backward balanced into : counter2<4>/count_o_9_BRB1 counter2<4>/count_o_9_BRB2.
+	Register(s) counter2<5>/count_o_12 has(ve) been backward balanced into : counter2<5>/count_o_12_BRB1 counter2<5>/count_o_12_BRB2.
+	Register(s) counter2<5>/count_o_9 has(ve) been backward balanced into : counter2<5>/count_o_9_BRB1 counter2<5>/count_o_9_BRB2.
+	Register(s) counter2<6>/count_o_12 has(ve) been backward balanced into : counter2<6>/count_o_12_BRB1 counter2<6>/count_o_12_BRB2.
+	Register(s) counter2<6>/count_o_9 has(ve) been backward balanced into : counter2<6>/count_o_9_BRB1 counter2<6>/count_o_9_BRB2.
+	Register(s) counter2<7>/count_o_12 has(ve) been backward balanced into : counter2<7>/count_o_12_BRB1 counter2<7>/count_o_12_BRB2.
+	Register(s) counter2<7>/count_o_9 has(ve) been backward balanced into : counter2<7>/count_o_9_BRB1 counter2<7>/count_o_9_BRB2.
+	Register(s) counter2<8>/count_o_12 has(ve) been backward balanced into : counter2<8>/count_o_12_BRB1 counter2<8>/count_o_12_BRB2.
+	Register(s) counter2<8>/count_o_9 has(ve) been backward balanced into : counter2<8>/count_o_9_BRB1 counter2<8>/count_o_9_BRB2.
+	Register(s) counter2<9>/count_o_12 has(ve) been backward balanced into : counter2<9>/count_o_12_BRB1 counter2<9>/count_o_12_BRB2.
+	Register(s) counter2<9>/count_o_9 has(ve) been backward balanced into : counter2<9>/count_o_9_BRB1 counter2<9>/count_o_9_BRB2.
+	Register(s) photons1_25 has(ve) been backward balanced into : photons1_25_BRB0 .
+	Register(s) photons2_25 has(ve) been backward balanced into : photons2_25_BRB0 photons2_25_BRB1.
+	Register(s) reset_buf has(ve) been backward balanced into : reset_buf_BRB0 reset_buf_BRB1 reset_buf_BRB2.
+	Register(s) sync1x has(ve) been backward balanced into : sync1x_BRB0 sync1x_BRB1.
+	Register(s) sync2x_det_free has(ve) been backward balanced into : sync2x_det_free_BRB0 sync2x_det_free_BRB1.
+	Register(s) sync_en_det has(ve) been backward balanced into : sync_en_det_BRB0 sync_en_det_BRB1 sync_en_det_BRB2 sync_en_det_BRB3 sync_en_det_BRB4 sync_en_det_BRB5.
+Unit <PhotonCounter> processed.
+FlipFlop reset has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <PhotonCounter> :
+	Found 2-bit shift register for signal <set_clk>.
+	Found 2-bit shift register for signal <clear_photons>.
+	Found 2-bit shift register for signal <counter2<25>/syncdly_f_BRB0>.
+	Found 2-bit shift register for signal <counter2<25>/syncdly_f_BRB1>.
+Unit <PhotonCounter> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2291
+ Flip-Flops                                            : 2291
+# Shift Registers                                      : 4
+ 2-bit shift register                                  : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : PhotonCounter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4499
+#      GND                         : 4
+#      INV                         : 78
+#      LUT1                        : 850
+#      LUT2                        : 304
+#      LUT3                        : 1045
+#      LUT4                        : 86
+#      LUT5                        : 38
+#      LUT6                        : 255
+#      MUXCY                       : 918
+#      MUXF7                       : 2
+#      VCC                         : 4
+#      XORCY                       : 915
+# FlipFlops/Latches                : 2727
+#      FD                          : 395
+#      FDC                         : 48
+#      FDE                         : 226
+#      FDR                         : 984
+#      FDRE                        : 1011
+#      FDS                         : 2
+#      FDSE                        : 61
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 5
+#      SRL16                       : 1
+#      SRLC16E                     : 4
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 40
+#      IBUF                        : 10
+#      IBUFG                       : 2
+#      IOBUF                       : 16
+#      OBUF                        : 12
+# DCMs                             : 2
+#      DCM_SP                      : 2
+# Others                           : 16
+#      IODELAY2                    : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2676  out of  18224    14%  
+ Number of Slice LUTs:                 2661  out of   9112    29%  
+    Number used as Logic:              2656  out of   9112    29%  
+    Number used as Memory:                5  out of   2176     0%  
+       Number used as SRL:                5
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3088
+   Number with an unused Flip Flop:     412  out of   3088    13%  
+   Number with an unused LUT:           427  out of   3088    13%  
+   Number of fully used LUT-FF pairs:  2249  out of   3088    72%  
+   Number of unique control sets:        96
+
+IO Utilization: 
+ Number of IOs:                          40
+ Number of bonded IOBs:                  40  out of    186    21%  
+    IOB Flip Flops/Latches:              51
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_in                             | DCM_SP:CLK0            | 2245  |
+clk_in                             | DCM_SP:CLK2X           | 177   |
+hi_in<0>                           | DCM_SP:CLK0            | 314   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 8.544ns (Maximum Frequency: 117.041MHz)
+   Minimum input arrival time before clock: 6.352ns
+   Maximum output required time after clock: 5.573ns
+   Maximum combinational path delay: 1.328ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_in'
+  Clock period: 8.544ns (frequency: 117.041MHz)
+  Total number of paths / destination ports: 22709 / 5375
+-------------------------------------------------------------------------
+Delay:               4.272ns (Levels of Logic = 3)
+  Source:            sync_div_2 (FF)
+  Destination:       sync_counter_0 (FF)
+  Source Clock:      clk_in rising
+  Destination Clock: clk_in rising 2.0X
+
+  Data Path: sync_div_2 to sync_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.525   1.137  sync_div_2 (sync_div_2)
+     LUT6:I0->O            2   0.254   0.834  sync_counter[7]_sync_div[7]_equal_21_o82 (sync_counter[7]_sync_div[7]_equal_21_o81)
+     LUT6:I4->O            8   0.250   0.944  Mcount_sync_counter_val1 (Mcount_sync_counter_val)
+     LUT4:I3->O            1   0.254   0.000  sync_counter_0_rstpot (sync_counter_0_rstpot)
+     FD:D                      0.074          sync_counter_0
+    ----------------------------------------
+    Total                      4.272ns (1.357ns logic, 2.915ns route)
+                                       (31.8% logic, 68.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hi_in<0>'
+  Clock period: 7.778ns (frequency: 128.568MHz)
+  Total number of paths / destination ports: 2804 / 505
+-------------------------------------------------------------------------
+Delay:               7.778ns (Levels of Logic = 7)
+  Source:            okHI/hicore/ti_addr_1 (FF)
+  Destination:       pipeoutfifo2/BU2/U0/grf.rf/gl0.rd/rpntr/gc0.count_d1_8 (FF)
+  Source Clock:      hi_in<0> rising
+  Destination Clock: hi_in<0> rising
+
+  Data Path: okHI/hicore/ti_addr_1 to pipeoutfifo2/BU2/U0/grf.rf/gl0.rd/rpntr/gc0.count_d1_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.525   1.499  ti_addr_1 (ok1<17>)
+     end scope: 'okHI/hicore:ok1<17>'
+     begin scope: 'pipeOutaf:ok1<17>'
+     LUT6:I1->O            1   0.254   1.137  ok2<16>81 (ok2<16>8)
+     LUT6:I0->O           18   0.254   1.235  ok2<16>83 (ok2<16>)
+     LUT2:I1->O            2   0.254   0.834  ep_read1 (ep_read)
+     end scope: 'pipeOutaf:ep_read'
+     begin scope: 'pipeoutfifo2:rd_en'
+     begin scope: 'pipeoutfifo2/BU2:rd_en'
+     LUT2:I0->O           18   0.250   1.234  U0/grf.rf/mem/gbm.tmp_ram_rd_en1 (U0/grf.rf/mem/gbm.tmp_ram_rd_en)
+     FDE:CE                    0.302          U0/grf.rf/gl0.rd/rpntr/gc0.count_d1_8
+    ----------------------------------------
+    Total                      7.778ns (1.839ns logic, 5.939ns route)
+                                       (23.6% logic, 76.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            sync_in (PAD)
+  Destination:       sync_buf_0 (FF)
+  Destination Clock: clk_in rising 2.0X
+
+  Data Path: sync_in to sync_buf_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  sync_in_IBUF (sync_in_IBUF)
+     FD:D                      0.074          sync_buf_0
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 530 / 119
+-------------------------------------------------------------------------
+Offset:              6.352ns (Levels of Logic = 5)
+  Source:            hi_in<7> (PAD)
+  Destination:       okHI/hicore/ti_dataout_0 (FF)
+  Destination Clock: hi_in<0> rising
+
+  Data Path: hi_in<7> to okHI/hicore/ti_dataout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.328   1.562  hi_in_7_IBUF (hi_in_7_IBUF)
+     begin scope: 'okHI/hicore:hi_in<7>'
+     LUT4:I0->O           18   0.254   1.463  hi_addr[3]_hi_addr[3]_OR_57_o1 (hi_addr[3]_hi_addr[3]_OR_57_o)
+     LUT5:I2->O           16   0.235   1.182  state[31]_ti_dataout[15]_select_91_OUT<0>12 (N2)
+     LUT6:I5->O            1   0.254   0.000  state[31]_ti_dataout[15]_select_91_OUT<0>2 (state[31]_ti_dataout[15]_select_91_OUT<0>)
+     FDE:D                     0.074          ti_dataout_0
+    ----------------------------------------
+    Total                      6.352ns (2.145ns logic, 4.207ns route)
+                                       (33.8% logic, 66.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 33 / 17
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 2)
+  Source:            okHI/hicore/hi_busy (FF)
+  Destination:       hi_out<0> (PAD)
+  Source Clock:      hi_in<0> rising
+
+  Data Path: okHI/hicore/hi_busy to hi_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  hi_busy (hi_out<0>)
+     end scope: 'okHI/hicore:hi_out<0>'
+     OBUF:I->O                 2.912          okHI/obuf0 (hi_out<0>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Offset:              5.573ns (Levels of Logic = 2)
+  Source:            pmt_strecher_3 (FF)
+  Destination:       pmt_out (PAD)
+  Source Clock:      clk_in rising
+
+  Data Path: pmt_strecher_3 to pmt_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             3   0.525   1.042  pmt_strecher_3 (pmt_strecher_3)
+     LUT4:I0->O            5   0.254   0.840  pmt_out1 (pmt_out_OBUF)
+     OBUF:I->O                 2.912          pmt_out_OBUF (pmt_out)
+    ----------------------------------------
+    Total                      5.573ns (3.691ns logic, 1.882ns route)
+                                       (66.2% logic, 33.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Delay:               1.328ns (Levels of Logic = 1)
+  Source:            hi_inout<15> (PAD)
+  Destination:       okHI/delays[15].iodelay_inst:IDATAIN (PAD)
+
+  Data Path: hi_inout<15> to okHI/delays[15].iodelay_inst:IDATAIN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           0   1.328   0.000  okHI/delays[15].iobf0 (okHI/iobf0_hi_datain<15>)
+    IODELAY2:IDATAIN           0.000          okHI/delays[15].iodelay_inst
+    ----------------------------------------
+    Total                      1.328ns (1.328ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    6.676|         |         |         |
+hi_in<0>       |    3.278|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hi_in<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    1.280|         |         |         |
+hi_in<0>       |    7.778|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.64 secs
+ 
+--> 
+
+Total memory usage is 152276 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

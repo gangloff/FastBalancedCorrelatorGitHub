@@ -1,0 +1,31 @@
+Release 14.2 Drc P.28xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Thu Jul 04 12:17:21 2013
+
+drc -z PhotonCounter.ncd PhotonCounter.pcf
+
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<pllloop/DCM_INST>. 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<pllloop/DCM_INST> and
+DESKEW(5). 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<pllloop/DCM_INST> found
+no EXTERN driver in CLKFB path. 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<pllloop/DCM_INST> found
+non-EXTERN block <BUFG> in CLKFB path. 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<pllloop/DCM_INST> found
+NO extern 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<okHI/hi_dcm>. 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<okHI/hi_dcm> and
+DESKEW(5). 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<okHI/hi_dcm> found no
+EXTERN driver in CLKFB path. 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<okHI/hi_dcm> found
+non-EXTERN block <BUFG> in CLKFB path. 
+Now executing Pdr_LogDcm_DeskewExtern::DoCheck for block<okHI/hi_dcm> found NO
+extern 
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
