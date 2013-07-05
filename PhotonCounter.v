@@ -32,6 +32,7 @@ module PhotonCounter(
    input  wire		  pmt_in1,     // PMT1 pulses
 	input  wire		  pmt_in2,     // PMT2 pulses
    input  wire		  sync_in,    // sync clock
+	output wire		  pulse_out,  // "probe" pulses to an AOM
    output wire      pmt_out,
    output wire		  reset_out);
 
@@ -88,6 +89,40 @@ always @(posedge clk2x) begin
 	set_clk_det <= (clk2x_counter == clk_divide);
 	set_clk <= set_clk_det;
 end
+
+
+reg [15:0] clk2x_counter_per;
+//reg [15:0] clk2x_counter_pw;
+reg [15:0] pulse_clk_div;
+reg [15:0] pw_div;
+reg pulsed_sig, pulsed_sig_det;
+wire phcountbool;
+
+// Update period and duty cycle of pulse output signal via Opal Kelly wires if the trigger #6 is activated
+always @(posedge clk) begin
+   if (reset) begin
+		  pulse_clk_div <= 16'h0;
+		  pw_div <= 16'h0;
+   end
+	else if (TrigIn40[6]) begin
+		  pulse_clk_div <= WireIn00[15:0];
+		  pw_div <= WireIn01[15:0];
+   end
+end
+
+//generate pulsed signal clock
+always @(posedge clk2x) begin
+	if(reset | (clk2x_counter_per == pulse_clk_div) )
+		clk2x_counter_per <= 16'h0;
+	else 
+		clk2x_counter_per <= clk2x_counter_per + 16'h1;   // used to be 4'h1 before update to larger ClkDividors
+		
+	pulsed_sig_det  <= (clk2x_counter_per < pw_div);
+	pulsed_sig <= pulsed_sig_det;
+end
+//assign pulse_out = 1'b0;
+assign pulse_out = pulsed_sig;
+assign phcountbool = pulsed_sig;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -157,8 +192,8 @@ reg pmt2, pmt_det2, pmt_free2;
 //reg [8:0] i;
 
 always @(posedge clk2x) begin
-	pmt_buf1 <= {pmt_buf1[2:0], pmt_in1};
-	pmt_buf2 <= {pmt_buf2[2:0], pmt_in2};
+	pmt_buf1 <= {pmt_buf1[2:0], pmt_in1 && phcountbool};
+	pmt_buf2 <= {pmt_buf2[2:0], pmt_in2 && phcountbool};
 end
 	
 
@@ -307,6 +342,7 @@ okPipeOut pipeOutaf (.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'haf),
 okTriggerIn ep40 (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk), .ep_trigger(TrigIn40));//.ok2(ok2), 
 okWireIn ep00 (.ok1(ok1), .ep_addr(8'h00), .ep_dataout(WireIn00));//.ok2(ok2), 
 okWireIn ep01 (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(WireIn01));
+//okWireIn ep02 (.ok1(ok1), .ep_addr(8'h02), .ep_dataout(WireIn02));
 //okWireOut ep20 (.ok1(ok1), .ok2(ok2_ep20), .ep_addr(8'h14), .ep_datain(WireOut20));
 
 okWireOR #(.N(nOK)) okor (.ok2(ok2), .ok2s(ok2x));

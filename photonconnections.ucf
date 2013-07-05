@@ -84,3 +84,4 @@ NET "pmt_in2"     LOC = "C8" | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
 NET "reset_out"  LOC = "B14" | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
 NET "pmt_out"    LOC = "B10" | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
 NET "sync_in"    LOC = "A10" | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+NET "pulse_out"    LOC = "T14" | IOSTANDARD = LVCMOS33 | SLEW = SLOW;

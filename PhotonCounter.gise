@@ -42,6 +42,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="PhotonCounter.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="PhotonCounter.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="PhotonCounter.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="PhotonCounter_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="PhotonCounter_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="PhotonCounter_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="PhotonCounter_map.mrp" xil_pn:subbranch="Map"/>
@@ -113,7 +114,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1372954442" xil_pn:in_ck="8150417784237904600" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6220918713612930899" xil_pn:start_ts="1372954417">
+    <transform xil_pn:end_ts="1373034551" xil_pn:in_ck="8150417784237904600" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6220918713612930899" xil_pn:start_ts="1373034482">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -131,11 +132,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1372954546" xil_pn:in_ck="655857191871534055" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1372191452215695514" xil_pn:start_ts="1372954546">
+    <transform xil_pn:end_ts="1373033677" xil_pn:in_ck="655857191871534055" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1372191452215695514" xil_pn:start_ts="1373033677">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1372954554" xil_pn:in_ck="-6107210530416097833" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="491041554483516373" xil_pn:start_ts="1372954546">
+    <transform xil_pn:end_ts="1373034632" xil_pn:in_ck="-6107210530416097833" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="491041554483516373" xil_pn:start_ts="1373034564">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -145,7 +146,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1372954592" xil_pn:in_ck="2081396207012469286" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-4125043967926944733" xil_pn:start_ts="1372954554">
+    <transform xil_pn:end_ts="1373034726" xil_pn:in_ck="2081396207012469286" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-4125043967926944733" xil_pn:start_ts="1373034632">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="PhotonCounter.pcf"/>
@@ -158,7 +159,7 @@
       <outfile xil_pn:name="PhotonCounter_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1372954628" xil_pn:in_ck="-9118942672091260321" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="7287610863686864138" xil_pn:start_ts="1372954592">
+    <transform xil_pn:end_ts="1373034846" xil_pn:in_ck="-9118942672091260321" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="7287610863686864138" xil_pn:start_ts="1373034726">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -173,7 +174,7 @@
       <outfile xil_pn:name="PhotonCounter_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1372954664" xil_pn:in_ck="3363037282799977563" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="396117104113915555" xil_pn:start_ts="1372954634">
+    <transform xil_pn:end_ts="1373034890" xil_pn:in_ck="3363037282799977563" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="396117104113915555" xil_pn:start_ts="1373034852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -186,7 +187,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1372954628" xil_pn:in_ck="-5898653248549789918" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1372954618">
+    <transform xil_pn:end_ts="1373034846" xil_pn:in_ck="-5898653248549789918" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1373034820">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="PhotonCounter.twr"/>

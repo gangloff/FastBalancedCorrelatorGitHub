@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.66 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.67 secs
  
 --> Reading design: PhotonCounter.prj
 
@@ -146,13 +146,13 @@ Elaborating module <IBUFG>.
 Elaborating module <BUFG>.
 
 Elaborating module <DCM(CLK_FEEDBACK="1X",CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=6.667,CLKOUT_PHASE_SHIFT="NONE",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",DFS_FREQUENCY_MODE="LOW",DLL_FREQUENCY_MODE="LOW",DUTY_CYCLE_CORRECTION="TRUE",FACTORY_JF=16'b1000000010000000,PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 166: Assignment to pmt_free2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 201: Assignment to pmt_free2 ignored, since the identifier is never used
 
 Elaborating module <phcounter>.
 
 Elaborating module <logger>.
-WARNING:HDLCompiler:413 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 414: Result of 27-bit expression is truncated to fit in 26-bit target.
-WARNING:HDLCompiler:413 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 434: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 450: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 470: Result of 27-bit expression is truncated to fit in 26-bit target.
 WARNING:HDLCompiler:1016 - "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v" Line 34: Port CLK180 is not connected to this instance
 WARNING:HDLCompiler:1016 - "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v" Line 62: Port BUSY is not connected to this instance
 
@@ -175,8 +175,8 @@ Elaborating module <OBUF>.
 Elaborating module <okCore>.
 
 Elaborating module <pipefifo_v6>.
-WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 295: Assignment to PipeFull1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 299: Assignment to PipeFull2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 330: Assignment to PipeFull1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 334: Assignment to PipeFull2 ignored, since the identifier is never used
 
 Elaborating module <okPipeOut>.
 
@@ -193,14 +193,19 @@ Elaborating module <okWireOR(N=2)>.
 Synthesizing Unit <PhotonCounter>.
     Related source file is "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v".
         nOK = 2
-INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 71: Output port <CLKIN_IBUFG_OUT> of the instance <pllloop> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 293: Output port <full> of the instance <pipeoutfifo1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 297: Output port <full> of the instance <pipeoutfifo2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 72: Output port <CLKIN_IBUFG_OUT> of the instance <pllloop> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 328: Output port <full> of the instance <pipeoutfifo1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" line 332: Output port <full> of the instance <pipeoutfifo2> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <reset>.
     Found 32-bit register for signal <clk_divide>.
     Found 32-bit register for signal <clk2x_counter>.
     Found 1-bit register for signal <set_clk_det>.
     Found 1-bit register for signal <set_clk>.
+    Found 16-bit register for signal <pulse_clk_div>.
+    Found 16-bit register for signal <pw_div>.
+    Found 16-bit register for signal <clk2x_counter_per>.
+    Found 1-bit register for signal <pulsed_sig_det>.
+    Found 1-bit register for signal <pulse_out>.
     Found 4-bit register for signal <sync_buf>.
     Found 1-bit register for signal <sync2x_det>.
     Found 1-bit register for signal <sync2x>.
@@ -233,17 +238,20 @@ INFO:Xst:3210 - "F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v
     Found 1-bit register for signal <clear_det>.
     Found 1-bit register for signal <clear_photons>.
     Found 1-bit register for signal <reset_buf>.
-    Found 4-bit subtractor for signal <pmt_strecher[3]_GND_1_o_sub_48_OUT> created at line 209.
-    Found 32-bit adder for signal <clk2x_counter[31]_GND_1_o_add_7_OUT> created at line 87.
-    Found 8-bit adder for signal <sync_counter[7]_GND_1_o_add_21_OUT> created at line 138.
-    Found 32-bit adder for signal <counter_f[31]_GND_1_o_add_58_OUT> created at line 250.
-    Found 32-bit comparator equal for signal <clk2x_counter[31]_clk_divide[31]_equal_7_o> created at line 84
-    Found 8-bit comparator equal for signal <sync_counter[7]_sync_div[7]_equal_21_o> created at line 138
-    Found 16-bit comparator greater for signal <max_count_f[15]_counter_f[31]_LessThan_53_o> created at line 239
+    Found 4-bit subtractor for signal <pmt_strecher[3]_GND_1_o_sub_61_OUT> created at line 244.
+    Found 32-bit adder for signal <clk2x_counter[31]_GND_1_o_add_7_OUT> created at line 88.
+    Found 16-bit adder for signal <clk2x_counter_per[15]_GND_1_o_add_20_OUT> created at line 118.
+    Found 8-bit adder for signal <sync_counter[7]_GND_1_o_add_34_OUT> created at line 173.
+    Found 32-bit adder for signal <counter_f[31]_GND_1_o_add_71_OUT> created at line 285.
+    Found 32-bit comparator equal for signal <clk2x_counter[31]_clk_divide[31]_equal_7_o> created at line 85
+    Found 16-bit comparator equal for signal <clk2x_counter_per[15]_pulse_clk_div[15]_equal_20_o> created at line 115
+    Found 16-bit comparator greater for signal <clk2x_counter_per[15]_pw_div[15]_LessThan_23_o> created at line 120
+    Found 8-bit comparator equal for signal <sync_counter[7]_sync_div[7]_equal_34_o> created at line 173
+    Found 16-bit comparator greater for signal <max_count_f[15]_counter_f[31]_LessThan_66_o> created at line 274
     Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred 271 D-type flip-flop(s).
-	inferred   3 Comparator(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 321 D-type flip-flop(s).
+	inferred   5 Comparator(s).
 Unit <PhotonCounter> synthesized.
 
 Synthesizing Unit <pll>.
@@ -260,7 +268,7 @@ Synthesizing Unit <phcounter>.
     Found 1-bit register for signal <full_flag>.
     Found 16-bit register for signal <count_o>.
     Found 1-bit register for signal <photon_f>.
-    Found 16-bit adder for signal <count_f[15]_GND_7_o_add_2_OUT> created at line 345.
+    Found 16-bit adder for signal <count_f[15]_GND_7_o_add_2_OUT> created at line 381.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  36 D-type flip-flop(s).
@@ -359,20 +367,21 @@ Unit <okWireOR> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 56
- 16-bit adder                                          : 52
+# Adders/Subtractors                                   : 57
+ 16-bit adder                                          : 53
  32-bit adder                                          : 2
  4-bit subtractor                                      : 1
  8-bit adder                                           : 1
-# Registers                                            : 357
- 1-bit register                                        : 235
- 16-bit register                                       : 107
+# Registers                                            : 362
+ 1-bit register                                        : 237
+ 16-bit register                                       : 110
  26-bit register                                       : 6
  32-bit register                                       : 3
  4-bit register                                        : 4
  8-bit register                                        : 2
-# Comparators                                          : 3
- 16-bit comparator greater                             : 1
+# Comparators                                          : 5
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
  32-bit comparator equal                               : 1
  8-bit comparator equal                                : 1
 # Multiplexers                                         : 58
@@ -404,8 +413,9 @@ Loading core <okCore> for timing and area information for instance <hicore>.
 Synthesizing (advanced) Unit <PhotonCounter>.
 The following registers are absorbed into counter <counter_f>: 1 register on signal <counter_f>.
 The following registers are absorbed into counter <pmt_strecher>: 1 register on signal <pmt_strecher>.
-The following registers are absorbed into counter <sync_counter>: 1 register on signal <sync_counter>.
+The following registers are absorbed into counter <clk2x_counter_per>: 1 register on signal <clk2x_counter_per>.
 The following registers are absorbed into counter <clk2x_counter>: 1 register on signal <clk2x_counter>.
+The following registers are absorbed into counter <sync_counter>: 1 register on signal <sync_counter>.
 Unit <PhotonCounter> synthesized (advanced).
 
 Synthesizing (advanced) Unit <phcounter>.
@@ -416,15 +426,16 @@ Unit <phcounter> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 56
- 16-bit up counter                                     : 52
+# Counters                                             : 57
+ 16-bit up counter                                     : 53
  32-bit up counter                                     : 2
  4-bit down counter                                    : 1
  8-bit up counter                                      : 1
-# Registers                                            : 1375
- Flip-Flops                                            : 1375
-# Comparators                                          : 3
- 16-bit comparator greater                             : 1
+# Registers                                            : 1409
+ Flip-Flops                                            : 1409
+# Comparators                                          : 5
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
  32-bit comparator equal                               : 1
  8-bit comparator equal                                : 1
 # Multiplexers                                         : 108
@@ -465,7 +476,7 @@ INFO:Xst:2261 - The FF/Latch <counter2<25>/syncdly_f> in Unit <PhotonCounter> is
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block PhotonCounter, actual ratio is 35.
+Found area constraint ratio of 100 (+ 5) on block PhotonCounter, actual ratio is 36.
 INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
 INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i> 
 INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwas.wsts/ram_full_fb_i> 
@@ -587,13 +598,19 @@ Processing Unit <PhotonCounter> :
 	Register(s) counter2<8>/count_o_9 has(ve) been backward balanced into : counter2<8>/count_o_9_BRB1 counter2<8>/count_o_9_BRB2.
 	Register(s) counter2<9>/count_o_12 has(ve) been backward balanced into : counter2<9>/count_o_12_BRB1 counter2<9>/count_o_12_BRB2.
 	Register(s) counter2<9>/count_o_9 has(ve) been backward balanced into : counter2<9>/count_o_9_BRB1 counter2<9>/count_o_9_BRB2.
-	Register(s) photons1_25 has(ve) been backward balanced into : photons1_25_BRB0 .
-	Register(s) photons2_25 has(ve) been backward balanced into : photons2_25_BRB0 photons2_25_BRB1.
+	Register(s) photons1_25 has(ve) been backward balanced into : photons1_25_BRB0 photons1_25_BRB1.
+	Register(s) photons2_25 has(ve) been backward balanced into : photons2_25_BRB0 .
+	Register(s) pmt_buf1_0 has(ve) been backward balanced into : pmt_buf1_0_BRB0 pmt_buf1_0_BRB1.
+	Register(s) pmt_buf1_1 has(ve) been backward balanced into : pmt_buf1_1_BRB0 pmt_buf1_1_BRB1.
+	Register(s) pmt_buf2_0 has(ve) been backward balanced into : pmt_buf2_0_BRB0 .
+	Register(s) pmt_buf2_1 has(ve) been backward balanced into : pmt_buf2_1_BRB0 .
 	Register(s) reset_buf has(ve) been backward balanced into : reset_buf_BRB0 reset_buf_BRB1 reset_buf_BRB2.
 	Register(s) sync1x has(ve) been backward balanced into : sync1x_BRB0 sync1x_BRB1.
 	Register(s) sync2x_det_free has(ve) been backward balanced into : sync2x_det_free_BRB0 sync2x_det_free_BRB1.
 	Register(s) sync_en_det has(ve) been backward balanced into : sync_en_det_BRB0 sync_en_det_BRB1 sync_en_det_BRB2 sync_en_det_BRB3 sync_en_det_BRB4 sync_en_det_BRB5.
 Unit <PhotonCounter> processed.
+Replicating register pulsed_sig to handle IOB=TRUE attribute
+
 FlipFlop reset has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -601,6 +618,9 @@ Final Macro Processing ...
 Processing Unit <PhotonCounter> :
 	Found 2-bit shift register for signal <set_clk>.
 	Found 2-bit shift register for signal <clear_photons>.
+	Found 2-bit shift register for signal <pmt_buf1_1_BRB0>.
+	Found 3-bit shift register for signal <pmt_buf1_1_BRB1>.
+	Found 2-bit shift register for signal <pmt_buf2_1_BRB0>.
 	Found 2-bit shift register for signal <counter2<25>/syncdly_f_BRB0>.
 	Found 2-bit shift register for signal <counter2<25>/syncdly_f_BRB1>.
 Unit <PhotonCounter> processed.
@@ -609,10 +629,11 @@ Unit <PhotonCounter> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2291
- Flip-Flops                                            : 2291
-# Shift Registers                                      : 4
- 2-bit shift register                                  : 4
+# Registers                                            : 2337
+ Flip-Flops                                            : 2337
+# Shift Registers                                      : 7
+ 2-bit shift register                                  : 6
+ 3-bit shift register                                  : 1
 
 =========================================================================
 
@@ -635,39 +656,39 @@ Top Level Output File Name         : PhotonCounter.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4499
+# BELS                             : 4602
 #      GND                         : 4
-#      INV                         : 78
-#      LUT1                        : 850
-#      LUT2                        : 304
-#      LUT3                        : 1045
-#      LUT4                        : 86
+#      INV                         : 79
+#      LUT1                        : 865
+#      LUT2                        : 308
+#      LUT3                        : 1060
+#      LUT4                        : 102
 #      LUT5                        : 38
-#      LUT6                        : 255
-#      MUXCY                       : 918
+#      LUT6                        : 260
+#      MUXCY                       : 949
 #      MUXF7                       : 2
 #      VCC                         : 4
-#      XORCY                       : 915
-# FlipFlops/Latches                : 2727
-#      FD                          : 395
+#      XORCY                       : 931
+# FlipFlops/Latches                : 2776
+#      FD                          : 409
 #      FDC                         : 48
-#      FDE                         : 226
+#      FDE                         : 229
 #      FDR                         : 984
-#      FDRE                        : 1011
+#      FDRE                        : 1043
 #      FDS                         : 2
 #      FDSE                        : 61
 # RAMS                             : 2
 #      RAMB8BWER                   : 2
-# Shift Registers                  : 5
+# Shift Registers                  : 8
 #      SRL16                       : 1
-#      SRLC16E                     : 4
+#      SRLC16E                     : 7
 # Clock Buffers                    : 3
 #      BUFG                        : 3
-# IO Buffers                       : 40
+# IO Buffers                       : 41
 #      IBUF                        : 10
 #      IBUFG                       : 2
 #      IOBUF                       : 16
-#      OBUF                        : 12
+#      OBUF                        : 13
 # DCMs                             : 2
 #      DCM_SP                      : 2
 # Others                           : 16
@@ -680,23 +701,23 @@ Selected Device : 6slx16ftg256-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2676  out of  18224    14%  
- Number of Slice LUTs:                 2661  out of   9112    29%  
-    Number used as Logic:              2656  out of   9112    29%  
-    Number used as Memory:                5  out of   2176     0%  
-       Number used as SRL:                5
+ Number of Slice Registers:            2726  out of  18224    14%  
+ Number of Slice LUTs:                 2720  out of   9112    29%  
+    Number used as Logic:              2712  out of   9112    29%  
+    Number used as Memory:                8  out of   2176     0%  
+       Number used as SRL:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3088
-   Number with an unused Flip Flop:     412  out of   3088    13%  
-   Number with an unused LUT:           427  out of   3088    13%  
-   Number of fully used LUT-FF pairs:  2249  out of   3088    72%  
-   Number of unique control sets:        96
+ Number of LUT Flip Flop pairs used:   3177
+   Number with an unused Flip Flop:     451  out of   3177    14%  
+   Number with an unused LUT:           457  out of   3177    14%  
+   Number of fully used LUT-FF pairs:  2269  out of   3177    71%  
+   Number of unique control sets:        97
 
 IO Utilization: 
- Number of IOs:                          40
- Number of bonded IOBs:                  40  out of    186    21%  
-    IOB Flip Flops/Latches:              51
+ Number of IOs:                          41
+ Number of bonded IOBs:                  41  out of    186    22%  
+    IOB Flip Flops/Latches:              50
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
@@ -724,8 +745,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_in                             | DCM_SP:CLK0            | 2245  |
-clk_in                             | DCM_SP:CLK2X           | 177   |
+clk_in                             | DCM_SP:CLK0            | 2277  |
+clk_in                             | DCM_SP:CLK2X           | 197   |
 hi_in<0>                           | DCM_SP:CLK0            | 314   |
 -----------------------------------+------------------------+-------+
 
@@ -749,7 +770,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_in'
   Clock period: 8.544ns (frequency: 117.041MHz)
-  Total number of paths / destination ports: 22709 / 5375
+  Total number of paths / destination ports: 23506 / 5459
 -------------------------------------------------------------------------
 Delay:               4.272ns (Levels of Logic = 3)
   Source:            sync_div_2 (FF)
@@ -762,7 +783,7 @@ Delay:               4.272ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             1   0.525   1.137  sync_div_2 (sync_div_2)
-     LUT6:I0->O            2   0.254   0.834  sync_counter[7]_sync_div[7]_equal_21_o82 (sync_counter[7]_sync_div[7]_equal_21_o81)
+     LUT6:I0->O            2   0.254   0.834  sync_counter[7]_sync_div[7]_equal_34_o82 (sync_counter[7]_sync_div[7]_equal_34_o81)
      LUT6:I4->O            8   0.250   0.944  Mcount_sync_counter_val1 (Mcount_sync_counter_val)
      LUT4:I3->O            1   0.254   0.000  sync_counter_0_rstpot (sync_counter_0_rstpot)
      FD:D                      0.074          sync_counter_0
@@ -864,7 +885,7 @@ Offset:              4.118ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
-  Total number of paths / destination ports: 4 / 1
+  Total number of paths / destination ports: 5 / 2
 -------------------------------------------------------------------------
 Offset:              5.573ns (Levels of Logic = 2)
   Source:            pmt_strecher_3 (FF)
@@ -910,7 +931,7 @@ Clock to Setup on destination clock clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_in         |    6.676|         |         |         |
+clk_in         |    6.690|         |         |         |
 hi_in<0>       |    3.278|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -926,12 +947,12 @@ hi_in<0>       |    7.778|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.64 secs
+Total REAL time to Xst completion: 44.00 secs
+Total CPU time to Xst completion: 44.56 secs
  
 --> 
 
-Total memory usage is 152276 kilobytes
+Total memory usage is 153620 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    7 (   0 filtered)
