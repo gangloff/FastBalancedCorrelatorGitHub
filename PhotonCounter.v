@@ -41,7 +41,7 @@ module PhotonCounter(
 wire clk, clk2x, locked;
 ///////////////////////////////////////////////////////////////////////////////
 // OK wires
-wire [15:0] TrigIn40, WireIn00, WireIn01;
+wire [15:0] TrigIn40, WireIn00, WireIn01, WireIn02;
 
 wire [15:0] PipeData1;
 wire		PipeWrite1, PipeEmpty1, PipeFull1;
@@ -97,16 +97,22 @@ reg [15:0] pulse_clk_div;
 reg [15:0] pw_div;
 reg pulsed_sig, pulsed_sig_det;
 wire phcountbool;
+reg pulsedCollection;
+reg sync_src;
 
 // Update period and duty cycle of pulse output signal via Opal Kelly wires if the trigger #6 is activated
 always @(posedge clk) begin
    if (reset) begin
 		  pulse_clk_div <= 16'h0;
 		  pw_div <= 16'h0;
+		  pulsedCollection <= 1'h0;
+		  sync_src <= 1'h0;
    end
 	else if (TrigIn40[6]) begin
 		  pulse_clk_div <= WireIn00[15:0];
 		  pw_div <= WireIn01[15:0];
+		  pulsedCollection <= WireIn02[0];
+		  sync_src <= WireIn02[1];
    end
 end
 
@@ -122,7 +128,7 @@ always @(posedge clk2x) begin
 end
 //assign pulse_out = 1'b0;
 assign pulse_out = pulsed_sig;
-assign phcountbool = pulsed_sig;
+assign phcountbool = pulsed_sig | (~pulsedCollection);
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -141,7 +147,7 @@ reg sync_en_det;
 //	else if (TrigIn40[3]) gmeas_f <= WireIn00[0];
 
 always @(posedge clk2x)
-	sync_buf <= {sync_buf[2:0], sync_in};//gmeas_f ? pmt_in : sync_in};
+		sync_buf <= {sync_buf[2:0], (sync_in & sync_src) | (pulsed_sig & ~sync_src) };//gmeas_f ? pmt_in : sync_in};   
 
 always @(posedge clk2x)	begin
 	sync2x_det <= sync_en & sync_buf[2] & (~sync_buf[3]);
@@ -342,6 +348,7 @@ okPipeOut pipeOutaf (.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'haf),
 okTriggerIn ep40 (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk), .ep_trigger(TrigIn40));//.ok2(ok2), 
 okWireIn ep00 (.ok1(ok1), .ep_addr(8'h00), .ep_dataout(WireIn00));//.ok2(ok2), 
 okWireIn ep01 (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(WireIn01));
+okWireIn ep02 (.ok1(ok1), .ep_addr(8'h02), .ep_dataout(WireIn02));
 //okWireIn ep02 (.ok1(ok1), .ep_addr(8'h02), .ep_dataout(WireIn02));
 //okWireOut ep20 (.ok1(ok1), .ok2(ok2_ep20), .ep_addr(8'h14), .ep_datain(WireOut20));
 

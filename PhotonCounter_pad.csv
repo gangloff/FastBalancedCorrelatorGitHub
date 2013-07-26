@@ -1,7 +1,7 @@
 #Release 14.2 - par P.28xd (nt)
 #Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-#Fri Jul 05 10:33:38 2013
+#Wed Jul 24 14:38:00 2013
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -28,7 +28,7 @@ A6,led<6>,IOB,IO_L4N_0,OUTPUT,LVCMOS33,0,12,SLOW,,,,LOCATED,NO,NONE,
 A7,led<7>,IOB,IO_L6N_0,OUTPUT,LVCMOS33,0,12,SLOW,,,,LOCATED,NO,NONE,
 A8,,IOBS,IO_L33N_0,UNUSED,,0,,,,,,,,,
 A9,,IOBS,IO_L34N_GCLK18_0,UNUSED,,0,,,,,,,,,
-A10,sync_in,IOB,IO_L35N_GCLK16_0,INPUT,LVCMOS33,0,,,,NONE,,LOCATED,YES,NONE,
+A10,sync_in,IOB,IO_L35N_GCLK16_0,INPUT,LVCMOS33,0,,,,NONE,,LOCATED,NO,NONE,
 A11,,IOBS,IO_L39N_0,UNUSED,,0,,,,,,,,,
 A12,,IOBS,IO_L62N_VREF_0,UNUSED,,0,,,,,,,,,
 A13,,IOBS,IO_L63N_SCP6_0,UNUSED,,0,,,,,,,,,

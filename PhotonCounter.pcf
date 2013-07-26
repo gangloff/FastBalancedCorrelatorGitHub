@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.28xd on Fri Jul 05 10:31:57 2013
+// Written by: Map P.28xd on Wed Jul 24 14:37:30 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -84,33 +84,35 @@ TIMEGRP okHI_dcm_clk0 = BEL "okHI/delays[15].fdrein0" BEL
         "okHI/delays[1].fdreout0" BEL "okHI/delays[0].fdreout1" BEL
         "okHI/delays[0].fdreout0" BEL "ep40/eptrig_0" BEL "ep40/eptrig_1" BEL
         "ep40/eptrig_4" BEL "ep40/eptrig_5" BEL "ep40/eptrig_6" BEL
-        "ep01/ep_datahold_0" BEL "ep01/ep_datahold_1" BEL "ep01/ep_datahold_2"
-        BEL "ep01/ep_datahold_3" BEL "ep01/ep_datahold_4" BEL
-        "ep01/ep_datahold_5" BEL "ep01/ep_datahold_6" BEL "ep01/ep_datahold_7"
-        BEL "ep01/ep_datahold_8" BEL "ep01/ep_datahold_9" BEL
-        "ep01/ep_datahold_10" BEL "ep01/ep_datahold_11" BEL
-        "ep01/ep_datahold_12" BEL "ep01/ep_datahold_13" BEL
-        "ep01/ep_datahold_14" BEL "ep01/ep_datahold_15" BEL
-        "ep01/ep_dataout_0" BEL "ep01/ep_dataout_1" BEL "ep01/ep_dataout_2"
-        BEL "ep01/ep_dataout_3" BEL "ep01/ep_dataout_4" BEL
-        "ep01/ep_dataout_5" BEL "ep01/ep_dataout_6" BEL "ep01/ep_dataout_7"
-        BEL "ep01/ep_dataout_8" BEL "ep01/ep_dataout_9" BEL
-        "ep01/ep_dataout_10" BEL "ep01/ep_dataout_11" BEL "ep01/ep_dataout_12"
-        BEL "ep01/ep_dataout_13" BEL "ep01/ep_dataout_14" BEL
-        "ep01/ep_dataout_15" BEL "ep00/ep_datahold_0" BEL "ep00/ep_datahold_1"
-        BEL "ep00/ep_datahold_2" BEL "ep00/ep_datahold_3" BEL
-        "ep00/ep_datahold_4" BEL "ep00/ep_datahold_5" BEL "ep00/ep_datahold_6"
-        BEL "ep00/ep_datahold_7" BEL "ep00/ep_datahold_8" BEL
-        "ep00/ep_datahold_9" BEL "ep00/ep_datahold_10" BEL
-        "ep00/ep_datahold_11" BEL "ep00/ep_datahold_12" BEL
-        "ep00/ep_datahold_13" BEL "ep00/ep_datahold_14" BEL
-        "ep00/ep_datahold_15" BEL "ep00/ep_dataout_0" BEL "ep00/ep_dataout_1"
-        BEL "ep00/ep_dataout_2" BEL "ep00/ep_dataout_3" BEL
-        "ep00/ep_dataout_4" BEL "ep00/ep_dataout_5" BEL "ep00/ep_dataout_6"
-        BEL "ep00/ep_dataout_7" BEL "ep00/ep_dataout_8" BEL
-        "ep00/ep_dataout_9" BEL "ep00/ep_dataout_10" BEL "ep00/ep_dataout_11"
-        BEL "ep00/ep_dataout_12" BEL "ep00/ep_dataout_13" BEL
-        "ep00/ep_dataout_14" BEL "ep00/ep_dataout_15" BEL
+        "ep02/ep_datahold_0" BEL "ep02/ep_datahold_1" BEL "ep02/ep_dataout_0"
+        BEL "ep02/ep_dataout_1" BEL "ep01/ep_datahold_0" BEL
+        "ep01/ep_datahold_1" BEL "ep01/ep_datahold_2" BEL "ep01/ep_datahold_3"
+        BEL "ep01/ep_datahold_4" BEL "ep01/ep_datahold_5" BEL
+        "ep01/ep_datahold_6" BEL "ep01/ep_datahold_7" BEL "ep01/ep_datahold_8"
+        BEL "ep01/ep_datahold_9" BEL "ep01/ep_datahold_10" BEL
+        "ep01/ep_datahold_11" BEL "ep01/ep_datahold_12" BEL
+        "ep01/ep_datahold_13" BEL "ep01/ep_datahold_14" BEL
+        "ep01/ep_datahold_15" BEL "ep01/ep_dataout_0" BEL "ep01/ep_dataout_1"
+        BEL "ep01/ep_dataout_2" BEL "ep01/ep_dataout_3" BEL
+        "ep01/ep_dataout_4" BEL "ep01/ep_dataout_5" BEL "ep01/ep_dataout_6"
+        BEL "ep01/ep_dataout_7" BEL "ep01/ep_dataout_8" BEL
+        "ep01/ep_dataout_9" BEL "ep01/ep_dataout_10" BEL "ep01/ep_dataout_11"
+        BEL "ep01/ep_dataout_12" BEL "ep01/ep_dataout_13" BEL
+        "ep01/ep_dataout_14" BEL "ep01/ep_dataout_15" BEL "ep00/ep_datahold_0"
+        BEL "ep00/ep_datahold_1" BEL "ep00/ep_datahold_2" BEL
+        "ep00/ep_datahold_3" BEL "ep00/ep_datahold_4" BEL "ep00/ep_datahold_5"
+        BEL "ep00/ep_datahold_6" BEL "ep00/ep_datahold_7" BEL
+        "ep00/ep_datahold_8" BEL "ep00/ep_datahold_9" BEL
+        "ep00/ep_datahold_10" BEL "ep00/ep_datahold_11" BEL
+        "ep00/ep_datahold_12" BEL "ep00/ep_datahold_13" BEL
+        "ep00/ep_datahold_14" BEL "ep00/ep_datahold_15" BEL
+        "ep00/ep_dataout_0" BEL "ep00/ep_dataout_1" BEL "ep00/ep_dataout_2"
+        BEL "ep00/ep_dataout_3" BEL "ep00/ep_dataout_4" BEL
+        "ep00/ep_dataout_5" BEL "ep00/ep_dataout_6" BEL "ep00/ep_dataout_7"
+        BEL "ep00/ep_dataout_8" BEL "ep00/ep_dataout_9" BEL
+        "ep00/ep_dataout_10" BEL "ep00/ep_dataout_11" BEL "ep00/ep_dataout_12"
+        BEL "ep00/ep_dataout_13" BEL "ep00/ep_dataout_14" BEL
+        "ep00/ep_dataout_15" BEL
         "pipeoutfifo2/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_i" BEL
         "pipeoutfifo2/BU2/U0/grf.rf/gl0.rd/gras.rsts/ram_empty_fb_i" BEL
         "pipeoutfifo2/BU2/U0/grf.rf/gl0.rd/rpntr/gc0.count_d1_8" BEL
