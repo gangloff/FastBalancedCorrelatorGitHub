@@ -41,7 +41,8 @@ module PhotonCounter(
 wire clk, clk2x, locked;
 ///////////////////////////////////////////////////////////////////////////////
 // OK wires
-wire [15:0] TrigIn40, WireIn00, WireIn01, WireIn02;
+wire [15:0] TrigIn40;
+wire [15:0] WireIn00, WireIn01, WireIn02, WireIn03, WireIn04, WireIn05;
 
 wire [15:0] PipeData1;
 wire		PipeWrite1, PipeEmpty1, PipeFull1;
@@ -77,7 +78,7 @@ reg set_clk, set_clk_det;
 
 always @(posedge clk) begin
 	if (reset) clk_divide <= 32'h0;     // used to be 16'h0
-	else if (TrigIn40[4]) clk_divide <= {WireIn01[15:0],WireIn00[15:0]};     // used to be [15:0] before update to larger ClkDividors
+	else if (TrigIn40[2]) clk_divide <= {WireIn01[15:0],WireIn00[15:0]};     // used to be [15:0] before update to larger ClkDividors
 end
 
 //generate adjustable clock
@@ -91,37 +92,52 @@ always @(posedge clk2x) begin
 end
 
 
-reg [15:0] clk2x_counter_per;
-//reg [15:0] clk2x_counter_pw;
-reg [15:0] pulse_clk_div;
-reg [15:0] pw_div;
+reg [31:0] clk2x_counter_per;
+reg [31:0] pulsePeriod_clk_div;
+reg [31:0] pw_div;
+reg [31:0] delay_div;
 reg pulsed_sig, pulsed_sig_det;
 wire phcountbool;
-reg pulsedCollection;
-reg sync_src;
+wire pulsedCollection;  // used to be reg
+wire sync_src;  // used to be reg
+
+assign sync_src = 1'b0;
+assign pulsedCollection = 1'b0;
 
 // Update period and duty cycle of pulse output signal via Opal Kelly wires if the trigger #6 is activated
 always @(posedge clk) begin
    if (reset) begin
-		  pulse_clk_div <= 16'h0;
-		  pw_div <= 16'h0;
-		  pulsedCollection <= 1'h0;
-		  sync_src <= 1'h0;
+		  pulsePeriod_clk_div <= 32'h0;
+		  pw_div <= 32'h0;
+		  delay_div <= 32'h0;
+
+		  //pw_div <= 16'h0;
+		  //pulsedCollection <= 1'h0;
+		  //sync_src <= 1'h0;
    end
-	else if (TrigIn40[6]) begin
-		  pulse_clk_div <= WireIn00[15:0];
-		  pw_div <= WireIn01[15:0];
-		  pulsedCollection <= WireIn02[0];
-		  sync_src <= WireIn02[1];
+	else begin
+	     if (TrigIn40[5]) begin
+		     pulsePeriod_clk_div <= {WireIn01[15:0],WireIn00[15:0]};
+			  pw_div <= {WireIn03[15:0],WireIn02[15:0]};
+			  delay_div <= {WireIn05[15:0],WireIn04[15:0]};
+		     end
+		  //if (TrigIn40[6]) pulsePeriod_clk_div <= {WireIn01[15:0],WireIn00[15:0]};
+		  //if (TrigIn40[7]) pulsePeriod_clk_div <= {WireIn01[15:0],WireIn00[15:0]};
+		  //if (TrigIn40[8]) pulsePeriod_clk_div <= {WireIn01[15:0],WireIn00[15:0]};
+		  
+		  //pw_div <= WireIn01[15:0];
+		  //pulsedCollection <= WireIn02[0];
+		  //sync_src <= WireIn02[1];
    end
 end
 
+
 //generate pulsed signal clock
 always @(posedge clk2x) begin
-	if(reset | (clk2x_counter_per == pulse_clk_div) )
-		clk2x_counter_per <= 16'h0;
+	if(reset | (clk2x_counter_per == pulsePeriod_clk_div) )
+		clk2x_counter_per <= 32'h0;
 	else 
-		clk2x_counter_per <= clk2x_counter_per + 16'h1;   // used to be 4'h1 before update to larger ClkDividors
+		clk2x_counter_per <= clk2x_counter_per + 32'h1;   // used to be 4'h1 before update to larger ClkDividors
 		
 	pulsed_sig_det  <= (clk2x_counter_per < pw_div);
 	pulsed_sig <= pulsed_sig_det;
@@ -172,7 +188,7 @@ end
 
 always @(posedge clk) 
 	if (reset) sync_div <= 8'b0;
-	else if (TrigIn40[5]) sync_div <= WireIn00[7:0];
+	else if (TrigIn40[3]) sync_div <= WireIn00[7:0];
 
 always @(posedge clk2x) begin
 	if(reset) sync_counter <= 8'b0;
@@ -263,8 +279,8 @@ wire [((`nbins-1)*(`binsize)-1):0] databus1;
 wire [((`nbins-1)*(`binsize)-1):0] databus2;
 reg clear_photons, clear_det;
 
-phcounter counter1[(`nbins-1):0] (.count_o({databus1, phcount1[`binsize-1:0]}), .clk_i(clk), .reset_i(reset), .photon_i(photons_sync1), .sync_i(sync1x), .ld_i(count_ld1), .count_i({`binsize'h0, databus1}), .clear_i(clear_photons | TrigIn40[1] | TrigIn40[5])); //MUX
-phcounter counter2[(`nbins-1):0] (.count_o({databus2, phcount2[`binsize-1:0]}), .clk_i(clk), .reset_i(reset), .photon_i(photons_sync2), .sync_i(sync1x), .ld_i(count_ld2), .count_i({`binsize'h0, databus2}), .clear_i(clear_photons | TrigIn40[1] | TrigIn40[5])); //MUX
+phcounter counter1[(`nbins-1):0] (.count_o({databus1, phcount1[`binsize-1:0]}), .clk_i(clk), .reset_i(reset), .photon_i(photons_sync1), .sync_i(sync1x), .ld_i(count_ld1), .count_i({`binsize'h0, databus1}), .clear_i(clear_photons | TrigIn40[1] | TrigIn40[3])); //MUX
+phcounter counter2[(`nbins-1):0] (.count_o({databus2, phcount2[`binsize-1:0]}), .clk_i(clk), .reset_i(reset), .photon_i(photons_sync2), .sync_i(sync1x), .ld_i(count_ld2), .count_i({`binsize'h0, databus2}), .clear_i(clear_photons | TrigIn40[1] | TrigIn40[3])); //MUX
 
 // Uncomment the following line for binsize < 16
 //assign phcount[15:`binsize] = {(16-`binsize){1'b0}};
@@ -285,7 +301,7 @@ always @(posedge clk)
 	else if (TrigIn40[1]) max_count_f <= WireIn00;
 
 always @(posedge clk)
-	if (reset | TrigIn40[1] | TrigIn40[5]) counter_f <=  32'h0;
+	if (reset | TrigIn40[1] | TrigIn40[3]) counter_f <=  32'h0;
 	else 
 		if (trigger_f) counter_f <= 32'h0;
 		else counter_f <= counter_f + 32'h1;
@@ -349,6 +365,9 @@ okTriggerIn ep40 (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk), .ep_trigger(TrigIn40
 okWireIn ep00 (.ok1(ok1), .ep_addr(8'h00), .ep_dataout(WireIn00));//.ok2(ok2), 
 okWireIn ep01 (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(WireIn01));
 okWireIn ep02 (.ok1(ok1), .ep_addr(8'h02), .ep_dataout(WireIn02));
+okWireIn ep03 (.ok1(ok1), .ep_addr(8'h03), .ep_dataout(WireIn03));
+okWireIn ep04 (.ok1(ok1), .ep_addr(8'h04), .ep_dataout(WireIn04));
+okWireIn ep05 (.ok1(ok1), .ep_addr(8'h05), .ep_dataout(WireIn05));
 //okWireIn ep02 (.ok1(ok1), .ep_addr(8'h02), .ep_dataout(WireIn02));
 //okWireOut ep20 (.ok1(ok1), .ok2(ok2_ep20), .ep_addr(8'h14), .ep_datain(WireOut20));
 

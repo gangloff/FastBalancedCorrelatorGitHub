@@ -60,3 +60,16 @@ map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -xe n -t 1 -xt
 par -w -intstyle ise -ol high -xe n -mt off PhotonCounter_map.ncd PhotonCounter.ncd PhotonCounter.pcf 
 trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml PhotonCounter.twx PhotonCounter.ncd -o PhotonCounter.twr PhotonCounter.pcf -ucf photonconnections.ucf 
 bitgen -intstyle ise -f PhotonCounter.ut PhotonCounter.ncd 
+xst -intstyle ise -ifn "F:/VIs/VV_Photonpy/FastBalancedCorrelatorGitHub/PhotonCounter.xst" -ofn "F:/VIs/VV_Photonpy/FastBalancedCorrelatorGitHub/PhotonCounter.syr" 
+xst -intstyle ise -ifn "F:/VIs/VV_Photonpy/FastBalancedCorrelatorGitHub/PhotonCounter.xst" -ofn "F:/VIs/VV_Photonpy/FastBalancedCorrelatorGitHub/PhotonCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001" -sd ipcore_dir -sd ../XEM6001 -aul -nt timestamp -uc photonconnections.ucf -p xc6slx16-ftg256-2 PhotonCounter.ngc PhotonCounter.ngd  
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -xe n -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc auto -power off -o PhotonCounter_map.ncd PhotonCounter.ngd PhotonCounter.pcf 
+par -w -intstyle ise -ol high -xe n -mt off PhotonCounter_map.ncd PhotonCounter.ncd PhotonCounter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml PhotonCounter.twx PhotonCounter.ncd -o PhotonCounter.twr PhotonCounter.pcf -ucf photonconnections.ucf 
+bitgen -intstyle ise -f PhotonCounter.ut PhotonCounter.ncd 
+xst -intstyle ise -ifn "F:/VIs/VV_Photonpy/FastBalancedCorrelatorGitHub/PhotonCounter.xst" -ofn "F:/VIs/VV_Photonpy/FastBalancedCorrelatorGitHub/PhotonCounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd "E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001" -sd ipcore_dir -sd ../XEM6001 -aul -nt timestamp -uc photonconnections.ucf -p xc6slx16-ftg256-2 PhotonCounter.ngc PhotonCounter.ngd  
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -xe n -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc auto -power off -o PhotonCounter_map.ncd PhotonCounter.ngd PhotonCounter.pcf 
+par -w -intstyle ise -ol high -xe n -mt off PhotonCounter_map.ncd PhotonCounter.ncd PhotonCounter.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml PhotonCounter.twx PhotonCounter.ncd -o PhotonCounter.twr PhotonCounter.pcf -ucf photonconnections.ucf 
+bitgen -intstyle ise -f PhotonCounter.ut PhotonCounter.ncd 

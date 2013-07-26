@@ -8,12 +8,12 @@
 <msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">ok1&lt;30&gt;</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">28</arg> more times for the following (max. 5 shown):
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">47</arg> more times for the following (max. 5 shown):
 <arg fmt="%s" index="3">ok1&lt;29&gt;,
+sync_in_IBUF,
 ep40/ep_trigger&lt;15&gt;,
 ep40/ep_trigger&lt;14&gt;,
-ep40/ep_trigger&lt;13&gt;,
-ep40/ep_trigger&lt;12&gt;</arg>
+ep40/ep_trigger&lt;13&gt;</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 

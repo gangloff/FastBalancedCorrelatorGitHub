@@ -5,13 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 207: Assignment to <arg fmt="%s" index="1">pmt_free2</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 108: Assignment to <arg fmt="%s" index="1">delay_div</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 457: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 223: Assignment to <arg fmt="%s" index="1">pmt_free2</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 477: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 476: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 496: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1016" delta="old" >"E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v" Line 34: Port <arg fmt="%s" index="1">CLK180</arg> is not connected to this instance
@@ -20,19 +23,25 @@
 <msg type="warning" file="HDLCompiler" num="1016" delta="old" >"E:/Program Files/Opal Kelly/FrontPanelNEW/FrontPanelUSB/FrontPanelHDL/XEM6001/okLibrary.v" Line 62: Port <arg fmt="%s" index="1">BUSY</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 336: Assignment to <arg fmt="%s" index="1">PipeFull1</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 352: Assignment to <arg fmt="%s" index="1">PipeFull1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 340: Assignment to <arg fmt="%s" index="1">PipeFull2</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v" Line 356: Assignment to <arg fmt="%s" index="1">PipeFull2</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v</arg>&quot; line <arg fmt="%s" index="2">72</arg>: Output port &lt;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">pllloop</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v</arg>&quot; line <arg fmt="%s" index="2">73</arg>: Output port &lt;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">pllloop</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v</arg>&quot; line <arg fmt="%s" index="2">334</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">pipeoutfifo1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v</arg>&quot; line <arg fmt="%s" index="2">350</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">pipeoutfifo1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v</arg>&quot; line <arg fmt="%s" index="2">338</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">pipeoutfifo2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v</arg>&quot; line <arg fmt="%s" index="2">354</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">pipeoutfifo2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v</arg>&quot; line <arg fmt="%s" index="2">369</arg>: Output port &lt;<arg fmt="%s" index="3">ep_dataout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ep04</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\VIs\VV_Photonpy\FastBalancedCorrelatorGitHub\PhotonCounter.v</arg>&quot; line <arg fmt="%s" index="2">370</arg>: Output port &lt;<arg fmt="%s" index="3">ep_dataout</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ep05</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">pllloop/DCM_INST</arg> in unit <arg fmt="%s" index="2">PhotonCounter</arg> of type <arg fmt="%s" index="3">DCM</arg> has been replaced by <arg fmt="%s" index="4">DCM_SP</arg>
